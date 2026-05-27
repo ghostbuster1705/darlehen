@@ -1,0 +1,1325 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aleksandr Nikolaev | Baufinanzierung in Berlin</title>
+    <meta
+      name="description"
+      content="Aleksandr Nikolaev vergleicht über 400 Banken für Ihre Baufinanzierung. Persönlich, unabhängig und zertifiziert nach §34i GewO."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0d1b2a;
+        --surface: #162032;
+        --gold: #c9a84c;
+        --gold-light: #e8c97a;
+        --text: #f0ede6;
+        --muted: #8a9ab0;
+        --radius: 6px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "DM Sans", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible,
+      textarea:focus-visible,
+      select:focus-visible {
+        outline: 2px solid var(--gold-light);
+        outline-offset: 2px;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 2.5rem));
+        margin-inline: auto;
+      }
+
+      .section {
+        padding: 5rem 0;
+      }
+
+      .section-divider {
+        width: min(1120px, calc(100% - 2.5rem));
+        margin: 0 auto;
+        border: 0;
+        border-top: 1px solid rgba(201, 168, 76, 0.45);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0 0 1rem;
+        font-family: "Playfair Display", serif;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 8vw, 4rem);
+      }
+
+      h2 {
+        font-size: clamp(1.6rem, 5.5vw, 2.6rem);
+      }
+
+      h3 {
+        font-size: clamp(1.2rem, 4vw, 1.5rem);
+      }
+
+      p {
+        margin: 0 0 1rem;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .eyebrow {
+        color: var(--gold-light);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .button,
+      button.button {
+        font: inherit;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: var(--radius);
+        padding: 0.85rem 1.3rem;
+        color: var(--bg);
+        background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+        font-weight: 700;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        transform: translateY(-1px);
+        box-shadow: 0 0 20px rgba(201, 168, 76, 0.45);
+        filter: brightness(1.03);
+      }
+
+      .button-outline {
+        color: var(--gold-light);
+        background: transparent;
+        border-color: rgba(201, 168, 76, 0.7);
+      }
+
+      .button-outline:hover,
+      .button-outline:focus-visible {
+        color: var(--bg);
+        background: var(--gold-light);
+      }
+
+      .card {
+        background: rgba(22, 32, 50, 0.8);
+        border: 1px solid rgba(138, 154, 176, 0.2);
+        border-left: 3px solid var(--gold);
+        border-radius: var(--radius);
+        padding: 1.2rem;
+      }
+
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+
+      .animate-on-scroll.in-view {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        overflow: clip;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle cx='2' cy='2' r='1' fill='%23c9a84c' fill-opacity='0.22'/%3E%3C/svg%3E");
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      .hero-shape {
+        position: absolute;
+        right: -10vw;
+        top: 14%;
+        width: min(52vw, 620px);
+        aspect-ratio: 1;
+        border: 1px solid rgba(201, 168, 76, 0.36);
+        transform: rotate(45deg);
+        background:
+          linear-gradient(135deg, rgba(201, 168, 76, 0.22), transparent 55%),
+          rgba(22, 32, 50, 0.28);
+      }
+
+      .house-silhouette {
+        position: absolute;
+        right: 10%;
+        bottom: 12%;
+        width: min(34vw, 370px);
+        height: min(24vw, 270px);
+        border: 2px solid rgba(201, 168, 76, 0.45);
+        border-top: none;
+        opacity: 0.35;
+      }
+
+      .house-silhouette::before,
+      .house-silhouette::after {
+        content: "";
+        position: absolute;
+      }
+
+      .house-silhouette::before {
+        width: 120%;
+        left: -10%;
+        top: -58%;
+        height: 80%;
+        border-top: 2px solid rgba(201, 168, 76, 0.45);
+        border-left: 2px solid rgba(201, 168, 76, 0.45);
+        transform: skewY(-28deg) rotate(-16deg);
+      }
+
+      .house-silhouette::after {
+        width: 28%;
+        height: 45%;
+        border: 2px solid rgba(201, 168, 76, 0.45);
+        border-bottom: none;
+        left: 36%;
+        bottom: 0;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+        padding: 6rem 0 4rem;
+      }
+
+      .hero-subline {
+        max-width: 560px;
+        font-size: clamp(1.02rem, 2.8vw, 1.3rem);
+        color: var(--text);
+        margin-bottom: 2rem;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 0.85rem;
+        margin-bottom: 2.2rem;
+      }
+
+      .stat-box {
+        background: rgba(13, 27, 42, 0.7);
+        border: 1px solid rgba(138, 154, 176, 0.28);
+        border-radius: var(--radius);
+        padding: 0.8rem 0.9rem;
+      }
+
+      .stat-value {
+        display: block;
+        color: var(--gold-light);
+        font-size: 1.45rem;
+        font-weight: 700;
+      }
+
+      .cta-primary {
+        animation: pulse-glow 2.5s ease-in-out infinite;
+      }
+
+      @keyframes pulse-glow {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.42);
+        }
+        50% {
+          box-shadow: 0 0 0 14px rgba(201, 168, 76, 0);
+        }
+      }
+
+      .hero-load {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .hero-load.loaded {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 0.9rem;
+      }
+
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        justify-content: center;
+        text-align: left;
+      }
+
+      .trust-icon {
+        width: 2rem;
+        height: 2rem;
+        color: var(--gold-light);
+        flex: 0 0 auto;
+      }
+
+      .logo-strip {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+
+      .logo-placeholder {
+        border: 1px dashed rgba(138, 154, 176, 0.45);
+        border-radius: var(--radius);
+        min-height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #73839a;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.6rem;
+        position: relative;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 5%;
+        right: 5%;
+        top: 35px;
+        height: 1px;
+        background: rgba(201, 168, 76, 0.36);
+      }
+
+      .step {
+        position: relative;
+        text-align: center;
+        padding: 0 0.35rem;
+      }
+
+      .step-icon-wrap {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 1px solid rgba(201, 168, 76, 0.58);
+        background: rgba(22, 32, 50, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 0.8rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .step .step-number {
+        color: var(--gold-light);
+        font-weight: 700;
+        font-size: 0.85rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .step h3 {
+        font-size: 1rem;
+      }
+
+      .step-icon {
+        width: 1.25rem;
+        height: 1.25rem;
+        color: var(--gold-light);
+      }
+
+      .calculator-wrap {
+        display: grid;
+        gap: 1.3rem;
+      }
+
+      .field {
+        display: grid;
+        gap: 0.55rem;
+      }
+
+      .field-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+        font-size: 0.95rem;
+      }
+
+      .range-value {
+        color: var(--gold-light);
+        font-weight: 700;
+      }
+
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 6px;
+        background: rgba(138, 154, 176, 0.4);
+        border-radius: 999px;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid var(--gold-light);
+        background: var(--gold);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      input[type="range"]::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid var(--gold-light);
+        background: var(--gold);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      input[type="range"]:hover::-webkit-slider-thumb,
+      input[type="range"]:focus-visible::-webkit-slider-thumb,
+      input[type="range"]:hover::-moz-range-thumb,
+      input[type="range"]:focus-visible::-moz-range-thumb {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 8px rgba(201, 168, 76, 0.2);
+      }
+
+      .calc-output {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 0.85rem;
+      }
+
+      .calc-box {
+        border: 1px solid rgba(138, 154, 176, 0.26);
+        border-left: 3px solid var(--gold);
+        border-radius: var(--radius);
+        padding: 0.85rem 0.95rem;
+        background: rgba(13, 27, 42, 0.65);
+        transition: opacity 0.2s ease;
+      }
+
+      .calc-box.updating {
+        opacity: 0.65;
+      }
+
+      .calc-box strong {
+        display: block;
+        color: var(--gold-light);
+        font-size: 1.2rem;
+      }
+
+      .calc-note {
+        margin-top: 1rem;
+        color: var(--muted);
+      }
+
+      .profile-grid {
+        display: grid;
+        gap: 1.4rem;
+      }
+
+      .profile-left {
+        background: rgba(22, 32, 50, 0.75);
+        border: 1px solid rgba(138, 154, 176, 0.22);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+      }
+
+      .avatar {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        border: 2px solid rgba(201, 168, 76, 0.66);
+        display: grid;
+        place-items: center;
+        font-family: "Playfair Display", serif;
+        font-size: 2rem;
+        color: var(--gold-light);
+        background: radial-gradient(circle at 30% 30%, rgba(201, 168, 76, 0.2), rgba(22, 32, 50, 0.6));
+      }
+
+      .badge-wrap {
+        display: flex;
+        gap: 0.55rem;
+        flex-wrap: wrap;
+        margin-top: 0.7rem;
+      }
+
+      .badge {
+        border: 1px solid rgba(201, 168, 76, 0.6);
+        color: var(--gold-light);
+        padding: 0.3rem 0.7rem;
+        border-radius: 999px;
+        font-size: 0.83rem;
+      }
+
+      .credential-card {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .credential-card::after {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        pointer-events: none;
+        opacity: 0;
+        background: linear-gradient(
+          115deg,
+          transparent 25%,
+          rgba(232, 201, 122, 0.12) 45%,
+          rgba(232, 201, 122, 0.45) 50%,
+          rgba(232, 201, 122, 0.12) 55%,
+          transparent 75%
+        );
+        transform: translateX(-120%);
+      }
+
+      .credential-card:hover::after,
+      .credential-card:focus-within::after {
+        opacity: 1;
+        animation: shimmer 1.15s ease;
+      }
+
+      @keyframes shimmer {
+        from {
+          transform: translateX(-130%);
+        }
+        to {
+          transform: translateX(130%);
+        }
+      }
+
+      .credential-header {
+        display: flex;
+        gap: 0.65rem;
+        align-items: center;
+        margin-bottom: 0.55rem;
+      }
+
+      .credential-icon {
+        width: 1.4rem;
+        height: 1.4rem;
+        color: var(--gold-light);
+        flex: 0 0 auto;
+      }
+
+      .register-block {
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid rgba(201, 168, 76, 0.35);
+        border-radius: var(--radius);
+        background: rgba(13, 27, 42, 0.5);
+      }
+
+      .register-number {
+        font-family: "Courier New", Courier, monospace;
+        color: var(--gold-light);
+        font-size: 1.12rem;
+        letter-spacing: 0.05em;
+      }
+
+      .testimonials-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .quote {
+        font-style: italic;
+      }
+
+      .avatar-small {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: var(--bg);
+        font-weight: 700;
+        background: linear-gradient(135deg, var(--gold), var(--gold-light));
+        margin-bottom: 0.6rem;
+      }
+
+      .stars {
+        color: var(--gold-light);
+        letter-spacing: 0.04em;
+        margin-bottom: 0.45rem;
+      }
+
+      .contact-form {
+        display: grid;
+        gap: 0.95rem;
+      }
+
+      .contact-form input,
+      .contact-form textarea,
+      .contact-form select {
+        width: 100%;
+        font: inherit;
+        color: var(--text);
+        background: rgba(13, 27, 42, 0.8);
+        border: 1px solid rgba(138, 154, 176, 0.38);
+        border-radius: var(--radius);
+        padding: 0.72rem 0.85rem;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .contact-form input:hover,
+      .contact-form textarea:hover,
+      .contact-form select:hover,
+      .contact-form input:focus-visible,
+      .contact-form textarea:focus-visible,
+      .contact-form select:focus-visible {
+        border-color: var(--gold);
+        box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.16);
+      }
+
+      .contact-form textarea {
+        min-height: 130px;
+        resize: vertical;
+      }
+
+      .contact-grid {
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      .checkbox {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+      }
+
+      .checkbox input {
+        margin-top: 0.25rem;
+        width: auto;
+      }
+
+      .form-message {
+        padding: 0.8rem 0.9rem;
+        border-radius: var(--radius);
+        border: 1px solid transparent;
+        display: none;
+      }
+
+      .form-message.error {
+        border-color: #d86f6f;
+        color: #ffb4b4;
+        background: rgba(216, 111, 111, 0.12);
+        display: block;
+      }
+
+      .form-message.success {
+        border-color: rgba(201, 168, 76, 0.55);
+        color: var(--gold-light);
+        background: rgba(201, 168, 76, 0.12);
+        display: block;
+      }
+
+      .footer {
+        padding: 2rem 0 0;
+        background: rgba(6, 12, 20, 0.45);
+      }
+
+      .footer-grid {
+        display: grid;
+        gap: 1.4rem;
+      }
+
+      .footer-center a {
+        color: var(--muted);
+        transition: color 0.2s ease;
+      }
+
+      .footer-center a:hover,
+      .footer-center a:focus-visible {
+        color: var(--gold-light);
+      }
+
+      .bottom-bar {
+        margin-top: 1.6rem;
+        border-top: 1px solid rgba(201, 168, 76, 0.3);
+        padding: 1rem 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      .legal-block {
+        background: rgba(22, 32, 50, 0.75);
+        border: 1px solid rgba(138, 154, 176, 0.25);
+        border-left: 3px solid var(--gold);
+        border-radius: var(--radius);
+        padding: 1.1rem;
+      }
+
+      @media (min-width: 640px) {
+        .hero-stats {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .trust-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .logo-strip {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .calc-output {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .contact-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .footer-grid {
+          grid-template-columns: 1.3fr 1fr 1.25fr;
+        }
+      }
+
+      @media (min-width: 900px) {
+        .section {
+          padding: 6rem 0;
+        }
+
+        .hero-content {
+          padding: 6rem 0;
+        }
+
+        .profile-grid {
+          grid-template-columns: minmax(250px, 0.8fr) minmax(0, 1.2fr);
+          align-items: start;
+        }
+
+        .testimonials-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .house-silhouette {
+          opacity: 0.55;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero" id="start">
+      <div class="hero-shape" aria-hidden="true"></div>
+      <div class="house-silhouette" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <p class="eyebrow hero-load" style="transition-delay: 0ms">Baufinanzierung in Berlin</p>
+        <h1 class="hero-load" style="transition-delay: 150ms">Ihr Traumhaus. Unser bester Zinssatz.</h1>
+        <p class="hero-subline hero-load" style="transition-delay: 300ms">
+          Wir vergleichen über 400 Banken – für Ihre beste Baufinanzierung.
+        </p>
+        <div class="hero-stats hero-load" style="transition-delay: 450ms">
+          <div class="stat-box">
+            <span class="stat-value" data-counter data-target="400" data-suffix="+">0</span>
+            <span class="muted">Banken</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-value" data-counter data-target="98" data-suffix="%">0</span>
+            <span class="muted">Kundenzufriedenheit</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-value" data-counter data-target="2.3" data-prefix="€" data-suffix=" Mrd.">0</span>
+            <span class="muted">vermittelt</span>
+          </div>
+        </div>
+        <a class="button cta-primary hero-load" style="transition-delay: 600ms" href="#anfrage"
+          >Kostenlose Beratung anfragen</a
+        >
+      </div>
+    </header>
+
+    <hr class="section-divider" />
+
+    <section class="section" aria-label="Vertrauen">
+      <div class="container">
+        <div class="trust-grid">
+          <article class="card trust-item animate-on-scroll">
+            <svg class="trust-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 3L4 7v6c0 5 3.4 7.8 8 9 4.6-1.2 8-4 8-9V7l-8-4Zm0 2.2 5.8 2.9v4.9c0 3.8-2.4 5.9-5.8 7-3.4-1.1-5.8-3.2-5.8-7V8.1L12 5.2Z"
+              />
+            </svg>
+            <div>
+              <strong>Unabhängig</strong>
+              <p class="muted">Skaliert auf Ihre Ziele, nicht auf Bankvorgaben.</p>
+            </div>
+          </article>
+          <article class="card trust-item animate-on-scroll" style="transition-delay: 120ms">
+            <svg class="trust-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M20 6h-3.2A3.8 3.8 0 0 0 12 3.6 3.8 3.8 0 0 0 7.2 6H4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h.9L6 20h12l1.1-8H20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Zm-8-1a1.9 1.9 0 0 1 1.9 1.9V6h-3.8v.9A1.9 1.9 0 0 1 12 5Zm5.7 13H6.3l-.8-6h13l-.8 6Z"
+              />
+            </svg>
+            <div>
+              <strong>Kostenlos</strong>
+              <p class="muted">Beratung und Angebotsvergleich sind unverbindlich.</p>
+            </div>
+          </article>
+          <article class="card trust-item animate-on-scroll" style="transition-delay: 240ms">
+            <svg class="trust-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Zm0 2.1 6 2.3v4.6c0 4.1-2.6 8-6 9.2-3.4-1.2-6-5.1-6-9.2V6.4l6-2.3Zm-1.2 10.2-2.3-2.3-1.4 1.4 3.7 3.7 6-6-1.4-1.4-4.6 4.6Z"
+              />
+            </svg>
+            <div>
+              <strong>Zertifiziert §34i GewO</strong>
+              <p class="muted">Geprüfte Sachkunde und registrierte Vermittlung.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="logo-strip animate-on-scroll">
+          <div class="logo-placeholder">Partnerbank</div>
+          <div class="logo-placeholder">Partnerbank</div>
+          <div class="logo-placeholder">Partnerbank</div>
+          <div class="logo-placeholder">Partnerbank</div>
+          <div class="logo-placeholder">Partnerbank</div>
+          <div class="logo-placeholder">Partnerbank</div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <section class="section" id="ablauf">
+      <div class="container">
+        <p class="eyebrow">Wie es funktioniert</p>
+        <h2>Vier Schritte zu Ihrer Finanzierung</h2>
+        <div class="timeline">
+          <article class="step animate-on-scroll" data-step style="transition-delay: 0ms">
+            <div class="step-icon-wrap">
+              <svg class="step-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12h2V6h16v12h2V6a2 2 0 0 0-2-2Zm-9 5H6v2h5V9Zm7 4H6v2h12v-2Zm0 4H6v2h12v-2Z" />
+              </svg>
+            </div>
+            <div class="step-number">1</div>
+            <h3>Kostenlos anfragen</h3>
+          </article>
+          <article class="step animate-on-scroll" data-step style="transition-delay: 150ms">
+            <div class="step-icon-wrap">
+              <svg class="step-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 3a9 9 0 0 0-9 9h2a7 7 0 1 1 2.1 5l1.5-1.5H3V21l1.7-1.7A9 9 0 1 0 12 3Zm-.8 4v5.4l4.4 2.6.9-1.6-3.5-2V7h-1.8Z" />
+              </svg>
+            </div>
+            <div class="step-number">2</div>
+            <h3>Persönliche Beratung</h3>
+          </article>
+          <article class="step animate-on-scroll" data-step style="transition-delay: 300ms">
+            <div class="step-icon-wrap">
+              <svg class="step-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M4 5h7v14H4V5Zm9 0h7v8h-7V5Zm0 10h7v4h-7v-4Z" />
+              </svg>
+            </div>
+            <div class="step-number">3</div>
+            <h3>Angebote vergleichen</h3>
+          </article>
+          <article class="step animate-on-scroll" data-step style="transition-delay: 450ms">
+            <div class="step-icon-wrap">
+              <svg class="step-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 2 2 9h3v11h6v-7h2v7h6V9h3L12 2Zm0 2.5 6.5 4.5H17v9h-2v-7H9v7H7V9H5.5L12 4.5Z" />
+              </svg>
+            </div>
+            <div class="step-number">4</div>
+            <h3>Traumhaus finanzieren</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <section class="section" id="rechner">
+      <div class="container">
+        <p class="eyebrow">Baufinanzierungs-Rechner</p>
+        <h2>Erster Richtwert in Sekunden</h2>
+        <div class="card calculator-wrap animate-on-scroll">
+          <div class="field">
+            <div class="field-row">
+              <label for="kaufpreis">Kaufpreis</label>
+              <span class="range-value" id="kaufpreisValue">€400.000</span>
+            </div>
+            <input id="kaufpreis" type="range" min="100000" max="2000000" step="10000" value="400000" />
+          </div>
+
+          <div class="field">
+            <div class="field-row">
+              <label for="eigenkapital">Eigenkapital</label>
+              <span class="range-value" id="eigenkapitalValue">20%</span>
+            </div>
+            <input id="eigenkapital" type="range" min="5" max="50" step="1" value="20" />
+          </div>
+
+          <div class="field">
+            <div class="field-row">
+              <label for="laufzeit">Laufzeit</label>
+              <span class="range-value" id="laufzeitValue">20 Jahre</span>
+            </div>
+            <input id="laufzeit" type="range" min="5" max="30" step="1" value="20" />
+          </div>
+
+          <div class="calc-output" id="calcOutput">
+            <div class="calc-box">
+              <span>Monatliche Rate</span>
+              <strong id="monatlicheRate">€0</strong>
+            </div>
+            <div class="calc-box">
+              <span>Zinssatz (indicative)</span>
+              <strong id="zinssatz">0,00%</strong>
+            </div>
+            <div class="calc-box">
+              <span>Gesamtkosten</span>
+              <strong id="gesamtkosten">€0</strong>
+            </div>
+          </div>
+
+          <p>Ihr persönliches Angebot in 24 Stunden – kostenlos &amp; unverbindlich.</p>
+          <p class="calc-note">Alle Berechnungen sind unverbindliche Richtwerte.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <section class="section" id="ueber-mich">
+      <div class="container">
+        <p class="eyebrow">Über mich</p>
+        <h2>Ihr Experte: Aleksandr Nikolaev</h2>
+
+        <div class="profile-grid">
+          <aside class="profile-left animate-on-scroll">
+            <div class="avatar" aria-hidden="true">AN</div>
+            <h3 style="margin-top: 1rem">Aleksandr Nikolaev</h3>
+            <div class="badge-wrap">
+              <span class="badge">M.Sc. BWL</span>
+              <span class="badge">IHK-geprüft §34i</span>
+            </div>
+          </aside>
+
+          <div class="animate-on-scroll">
+            <article class="card credential-card" tabindex="0">
+              <div class="credential-header">
+                <svg class="credential-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Zm0 2.1 6 2.3v4.6c0 4.1-2.6 8-6 9.2-3.4-1.2-6-5.1-6-9.2V6.4l6-2.3Zm-1.2 10.2-2.3-2.3-1.4 1.4 3.7 3.7 6-6-1.4-1.4-4.6 4.6Z"
+                  />
+                </svg>
+                <h3>Geprüfter Fachmann für Immobiliardarlehensvermittlung IHK</h3>
+              </div>
+              <p>
+                Sachkundeprüfung nach §34i Abs. 2 Nr. 4 GewO erfolgreich abgelegt vor der Industrie- und Handelskammer
+                zu Berlin.
+              </p>
+              <p class="muted">IHK Berlin · 20. Juni 2025</p>
+            </article>
+
+            <article class="card credential-card" style="margin-top: 0.9rem" tabindex="0">
+              <div class="credential-header">
+                <svg class="credential-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fill="currentColor"
+                    d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3Zm0 9.8L5 9l7-3.8L19 9l-7 3.8ZM4 13.3V17c0 2.2 3.6 4 8 4s8-1.8 8-4v-3.7l-8 4.4-8-4.4Z"
+                  />
+                </svg>
+                <h3>Master of Science (M.Sc.) — Betriebswirtschaftslehre</h3>
+              </div>
+              <p>
+                Studiengang mit Schwerpunkt Internationale Ressourcenwirtschaft an der Technische Universität
+                Bergakademie Freiberg.
+              </p>
+              <p class="muted">TU Bergakademie Freiberg · September 2019</p>
+            </article>
+
+            <div class="register-block">
+              <p class="eyebrow" style="margin-bottom: 0.35rem">Registrierter Vermittler</p>
+              <p class="register-number">D-W-107-SY7W-04</p>
+              <a
+                class="button button-outline"
+                href="https://www.vermittlerregister.info/recherche?a=suche&registernummer=D-W-107-SY7W-04"
+                target="_blank"
+                rel="noopener"
+                >Im Vermittlerregister prüfen →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <section class="section" id="kundenstimmen">
+      <div class="container">
+        <p class="eyebrow">Kundenstimmen</p>
+        <h2>Vertrauen, das sich auszahlt</h2>
+        <div class="testimonials-grid">
+          <article class="card animate-on-scroll">
+            <div class="avatar-small" aria-hidden="true">TK</div>
+            <div class="stars" aria-label="5 von 5 Sternen">★★★★★</div>
+            <p class="quote">„Dank Herrn Nikolaev haben wir 0,4% unter dem Marktdurchschnitt finanziert."</p>
+            <p class="muted">— Thomas K., München</p>
+          </article>
+          <article class="card animate-on-scroll" style="transition-delay: 130ms">
+            <div class="avatar-small" aria-hidden="true">SM</div>
+            <div class="stars" aria-label="5 von 5 Sternen">★★★★★</div>
+            <p class="quote">„Innerhalb von 3 Tagen hatten wir die Zusage. Unglaublich schnell."</p>
+            <p class="muted">— Sandra M., Berlin</p>
+          </article>
+          <article class="card animate-on-scroll" style="transition-delay: 260ms">
+            <div class="avatar-small" aria-hidden="true">MR</div>
+            <div class="stars" aria-label="5 von 5 Sternen">★★★★★</div>
+            <p class="quote">„Endlich jemand, der uns die Optionen wirklich erklärt hat."</p>
+            <p class="muted">— Markus &amp; Julia R., Hamburg</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <section class="section" id="anfrage">
+      <div class="container">
+        <p class="eyebrow">Anfrage</p>
+        <h2>Starten Sie jetzt – kostenlos &amp; unverbindlich</h2>
+        <form class="card contact-form animate-on-scroll" id="leadForm" novalidate>
+          <div class="contact-grid">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+            <div class="field">
+              <label for="email">E-Mail</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div class="field">
+              <label for="telefon">Telefon</label>
+              <input id="telefon" name="telefon" type="tel" required />
+            </div>
+            <div class="field">
+              <label for="kaufpreis_select">Kaufpreis</label>
+              <select id="kaufpreis_select" name="kaufpreis_select" required>
+                <option value="">Bitte wählen</option>
+                <option>Bis 300.000 €</option>
+                <option>300.000 € – 500.000 €</option>
+                <option>500.000 € – 800.000 €</option>
+                <option>800.000 € – 1.200.000 €</option>
+                <option>Über 1.200.000 €</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="nachricht">Nachricht</label>
+            <textarea id="nachricht" name="nachricht" required></textarea>
+          </div>
+          <label class="checkbox">
+            <input id="dsgvo" name="dsgvo" type="checkbox" required />
+            <span>Ich stimme der Datenschutzerklärung zu.</span>
+          </label>
+          <button class="button" type="submit">Jetzt anfragen →</button>
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>Aleksandr Nikolaev</strong><br />
+          Geprüfter Fachmann für Immobiliardarlehensvermittlung IHK<br />
+          M.Sc. Betriebswirtschaftslehre
+        </div>
+        <div class="footer-center">
+          <a href="#impressum">Impressum</a> |
+          <a href="#datenschutz">Datenschutz</a> |
+          <a href="#anfrage">Kontakt</a>
+        </div>
+        <div>
+          §34i GewO — IHK Berlin<br />
+          Register-Nr.: D-W-107-SY7W-04<br />
+          <a
+            class="button button-outline"
+            style="margin-top: 0.5rem"
+            href="https://www.vermittlerregister.info/recherche?a=suche&registernummer=D-W-107-SY7W-04"
+            target="_blank"
+            rel="noopener"
+            >Vermittlerregister prüfen →</a
+          >
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <div class="container">
+          © 2025 Aleksandr Nikolaev · Alle Angaben ohne Gewähr · Kein Angebot im Rechtssinne
+        </div>
+      </div>
+    </footer>
+
+    <section class="section" id="impressum">
+      <div class="container legal-block">
+        <h2>Impressum</h2>
+        <p>
+          Aleksandr Nikolaev<br />
+          Lea-Grundig-Str. 20<br />
+          12679 Berlin
+        </p>
+        <p>
+          Zuständige Aufsichtsbehörde:<br />
+          Industrie- und Handelskammer (IHK) Berlin
+        </p>
+        <p>
+          Erlaubnis nach §34i Abs. 2 Nr. 4 GewO<br />
+          Registrierungsnummer: D-W-107-SY7W-04<br />
+          Vermittlerregister:<br />
+          <a
+            class="button button-outline"
+            href="https://www.vermittlerregister.info/recherche?a=suche&registernummer=D-W-107-SY7W-04"
+            target="_blank"
+            rel="noopener"
+            >https://www.vermittlerregister.info/recherche?a=suche&amp;registernummer=D-W-107-SY7W-04</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="datenschutz" style="padding-top: 0">
+      <div class="container legal-block">
+        <h2>Datenschutz</h2>
+        <p>
+          Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht ohne Ihre Einwilligung an
+          Dritte weitergegeben. Für detaillierte Informationen kontaktieren Sie uns bitte direkt.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      (function () {
+        const euroFormat = new Intl.NumberFormat("de-DE", {
+          style: "currency",
+          currency: "EUR",
+          maximumFractionDigits: 0
+        });
+
+        const numberFormat = new Intl.NumberFormat("de-DE", {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
+
+        const heroItems = Array.from(document.querySelectorAll(".hero-load"));
+        heroItems.forEach((item) => requestAnimationFrame(() => item.classList.add("loaded")));
+
+        const counters = Array.from(document.querySelectorAll("[data-counter]"));
+        const duration = 2000;
+        const counterStart = performance.now();
+
+        function renderCounter(element, progress) {
+          const target = Number(element.dataset.target);
+          const prefix = element.dataset.prefix || "";
+          const suffix = element.dataset.suffix || "";
+          const current = target * progress;
+          const display =
+            target % 1 === 0
+              ? Math.round(current).toLocaleString("de-DE")
+              : current.toLocaleString("de-DE", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+          element.textContent = prefix + display + suffix;
+        }
+
+        function animateCounters(now) {
+          const elapsed = now - counterStart;
+          const progress = Math.min(elapsed / duration, 1);
+          counters.forEach((counter) => renderCounter(counter, progress));
+          if (progress < 1) {
+            requestAnimationFrame(animateCounters);
+          }
+        }
+        requestAnimationFrame(animateCounters);
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("in-view");
+              observer.unobserve(entry.target);
+            });
+          },
+          { threshold: 0.18 }
+        );
+
+        document.querySelectorAll(".animate-on-scroll").forEach((el) => observer.observe(el));
+
+        const kaufpreis = document.getElementById("kaufpreis");
+        const eigenkapital = document.getElementById("eigenkapital");
+        const laufzeit = document.getElementById("laufzeit");
+        const kaufpreisValue = document.getElementById("kaufpreisValue");
+        const eigenkapitalValue = document.getElementById("eigenkapitalValue");
+        const laufzeitValue = document.getElementById("laufzeitValue");
+        const monatlicheRate = document.getElementById("monatlicheRate");
+        const zinssatz = document.getElementById("zinssatz");
+        const gesamtkosten = document.getElementById("gesamtkosten");
+        const calcBoxes = Array.from(document.querySelectorAll(".calc-box"));
+
+        function indicativeRate(equityPercent) {
+          const clamped = Math.max(5, Math.min(20, equityPercent));
+          const minRate = 3.5;
+          const maxRate = 4.8;
+          const ratio = (20 - clamped) / (20 - 5);
+          return minRate + ratio * (maxRate - minRate);
+        }
+
+        function animateCalcBoxes() {
+          calcBoxes.forEach((box) => box.classList.add("updating"));
+          window.setTimeout(() => calcBoxes.forEach((box) => box.classList.remove("updating")), 190);
+        }
+
+        function updateCalculator() {
+          const purchasePrice = Number(kaufpreis.value);
+          const equityPercent = Number(eigenkapital.value);
+          const years = Number(laufzeit.value);
+
+          kaufpreisValue.textContent = euroFormat.format(purchasePrice);
+          eigenkapitalValue.textContent = equityPercent.toLocaleString("de-DE") + "%";
+          laufzeitValue.textContent = years.toLocaleString("de-DE") + " Jahre";
+
+          const ownCapital = purchasePrice * (equityPercent / 100);
+          const principal = Math.max(0, purchasePrice - ownCapital);
+          const annualRate = indicativeRate(equityPercent);
+          const r = annualRate / 100 / 12;
+          const n = years * 12;
+
+          let monthlyPayment = 0;
+          if (principal > 0 && n > 0) {
+            if (r === 0) {
+              monthlyPayment = principal / n;
+            } else {
+              const factor = Math.pow(1 + r, n);
+              monthlyPayment = principal * ((r * factor) / (factor - 1));
+            }
+          }
+
+          const totalCost = monthlyPayment * n + ownCapital;
+
+          monatlicheRate.textContent = euroFormat.format(Number.isFinite(monthlyPayment) ? monthlyPayment : 0);
+          zinssatz.textContent = numberFormat.format(annualRate) + "%";
+          gesamtkosten.textContent = euroFormat.format(Number.isFinite(totalCost) ? totalCost : 0);
+
+          animateCalcBoxes();
+        }
+
+        [kaufpreis, eigenkapital, laufzeit].forEach((input) => {
+          input.addEventListener("input", updateCalculator);
+        });
+
+        updateCalculator();
+
+        const leadForm = document.getElementById("leadForm");
+        const formMessage = document.getElementById("formMessage");
+
+        leadForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          formMessage.className = "form-message";
+          formMessage.textContent = "";
+
+          const emailField = leadForm.querySelector("#email");
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (!leadForm.checkValidity() || !emailPattern.test(emailField.value.trim())) {
+            formMessage.classList.add("error");
+            formMessage.textContent =
+              "Bitte prüfen Sie alle Pflichtfelder und geben Sie eine gültige E-Mail-Adresse an.";
+            return;
+          }
+
+          formMessage.classList.add("success");
+          formMessage.textContent =
+            "Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet. Wir melden uns kurzfristig bei Ihnen.";
+          leadForm.reset();
+          updateCalculator();
+        });
+      })();
+    </script>
+  </body>
+</html>
