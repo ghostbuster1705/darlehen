@@ -1114,7 +1114,7 @@
         margin-top: 1.6rem;
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1.1rem;
+        gap: 1.2rem;
       }
 
       .certificate-card {
@@ -1126,10 +1126,23 @@
         box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
       }
 
+      .cert-card-layout {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 1.2rem;
+        align-items: start;
+      }
+
+      .cert-info {
+        display: grid;
+        gap: 0.6rem;
+      }
+
       .org-badge {
         display: inline-flex;
         align-items: center;
-        margin-bottom: 0.9rem;
+        width: fit-content;
+        margin-bottom: 0.35rem;
         color: var(--gold);
         border: 1px solid rgba(168, 132, 60, 0.45);
         padding: 0.35rem 0.6rem;
@@ -1139,130 +1152,157 @@
         font-size: 0.72rem;
       }
 
-      .document-frame {
-        position: relative;
+      .cert-title {
+        margin: 0;
+        font-size: clamp(1.35rem, 2.8vw, 1.7rem);
+        line-height: 1.2;
+      }
+
+      .cert-subtitle {
+        margin: 0;
+      }
+
+      .cert-meta {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
+      }
+
+      .cert-meta-label {
+        font-size: 0.78rem;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 0.15rem;
+      }
+
+      .cert-badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+      }
+
+      .cert-badge {
         border: 1px solid var(--gold-muted);
-        border-radius: var(--radius);
-        padding: 1.1rem;
-        overflow: hidden;
-        background: linear-gradient(180deg, rgba(212, 184, 130, 0.08), rgba(255, 255, 255, 0.8));
-      }
-
-      .document-frame::before {
-        content: attr(data-watermark);
-        position: absolute;
-        right: 0.6rem;
-        top: -0.4rem;
-        color: var(--text);
-        opacity: 0.04;
-        font-family: "Cormorant Garamond", serif;
-        font-size: clamp(5rem, 12vw, 8rem);
-        font-weight: 700;
-        pointer-events: none;
-      }
-
-      .doc-label {
         color: var(--gold);
-        font-family: "Jost", sans-serif;
+        padding: 0.22rem 0.55rem;
+        border-radius: 999px;
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
-        letter-spacing: 0.16em;
-        font-size: 0.75rem;
-        margin-bottom: 0.6rem;
       }
 
-      .doc-title {
-        font-family: "Cormorant Garamond", serif;
-        font-size: clamp(1.35rem, 2.8vw, 1.625rem);
-        line-height: 1.25;
-        font-weight: 500;
-        margin: 0 0 0.5rem;
-      }
-
-      .doc-subtitle {
-        font-family: "Cormorant Garamond", serif;
-        font-size: clamp(1.125rem, 2.2vw, 1.35rem);
-        font-style: italic;
-        margin-bottom: 0.6rem;
-      }
-
-      .doc-fine-print {
-        font-size: 0.82rem;
-        color: var(--muted);
-        margin-bottom: 0.8rem;
-      }
-
-      .doc-divider {
-        margin: 0.75rem 0;
-        border: 0;
-        border-top: 1px solid var(--gold-muted);
-      }
-
-      .doc-name {
-        font-family: "Cormorant Garamond", serif;
-        font-size: clamp(1.2rem, 2.2vw, 1.375rem);
-        font-weight: 700;
-        margin-bottom: 0.2rem;
-      }
-
-      .doc-detail {
-        font-size: 0.86rem;
-        margin-bottom: 0.9rem;
-      }
-
-      .signature-row {
-        margin-top: 1.1rem;
-      }
-
-      .signature-line {
-        border-bottom: 1px solid rgba(168, 132, 60, 0.52);
-        margin-bottom: 0.35rem;
-      }
-
-      .signature-label {
-        font-size: 0.76rem;
-        color: var(--muted);
-      }
-
-      .expertise-details {
-        margin-top: 1rem;
-        border-top: 1px solid var(--border);
-        padding-top: 0.8rem;
-      }
-
-      .expertise-details summary {
-        cursor: pointer;
-        color: var(--gold);
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
-        font-size: 0.8rem;
-        list-style: none;
-      }
-
-      .expertise-details summary::-webkit-details-marker {
-        display: none;
-      }
-
-      .expertise-list {
-        margin: 0.8rem 0 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .expertise-list li {
+      .cert-pdf-wrapper {
         position: relative;
-        padding-left: 1rem;
-        margin-bottom: 0.35rem;
-        font-size: 0.89rem;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+        background: #fff;
       }
 
-      .expertise-list li::before {
-        content: "◆";
+      .cert-pdf-wrapper iframe {
+        display: block;
+        width: 100%;
+        height: 420px;
+        border: none;
+        background: #fff;
+      }
+
+      .pdf-fullscreen-btn {
         position: absolute;
-        left: 0;
+        top: 12px;
+        right: 12px;
+        border: 1px solid var(--gold);
+        background: var(--gold);
+        color: #fff;
+        font-family: "Jost", sans-serif;
+        font-size: 0.75rem;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 0.38rem 0.75rem;
+        border-radius: 2px;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .pdf-fullscreen-btn:hover,
+      .pdf-fullscreen-btn:focus-visible {
+        background: var(--gold-light);
+        border-color: var(--gold-light);
+      }
+
+      .pdf-fallback {
+        margin: 0;
+        padding: 20px;
+        font-family: "Jost", sans-serif;
+        color: #6b6560;
+        text-align: center;
+      }
+
+      .pdf-fallback a {
         color: var(--gold);
-        font-size: 0.64rem;
-        top: 0.55rem;
-        transform: translateY(-50%);
+      }
+
+      .pdf-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+      }
+
+      .pdf-modal.active {
+        display: flex;
+      }
+
+      .pdf-modal-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(26, 20, 14, 0.85);
+        backdrop-filter: blur(4px);
+      }
+
+      .pdf-modal-content {
+        position: relative;
+        z-index: 1;
+        width: 90vw;
+        height: 92vh;
+        margin: auto;
+        background: #fff;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .pdf-modal-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: var(--gold);
+        color: #fff;
+        border: none;
+        padding: 8px 20px;
+        font-family: "Jost", sans-serif;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 2px;
+        z-index: 2;
+      }
+
+      .pdf-modal-close:hover,
+      .pdf-modal-close:focus-visible {
+        background: var(--gold-light);
+      }
+
+      .pdf-modal-content iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
       }
 
       .compliance-badges {
@@ -1360,10 +1400,6 @@
         .hero-stats {
           grid-template-columns: repeat(3, minmax(0, 1fr));
         }
-
-        .certificate-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
       }
 
       @media (min-width: 900px) {
@@ -1376,7 +1412,7 @@
         }
       }
 
-      @media (max-width: 699px) {
+      @media (max-width: 767px) {
         .section-divider::after {
           padding: 0 0.45rem;
         }
@@ -1385,6 +1421,26 @@
           right: 6%;
           width: 36vw;
           height: 42vh;
+        }
+
+        .cert-card-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .cert-pdf-wrapper iframe {
+          height: 280px;
+        }
+
+        .pdf-fullscreen-btn {
+          position: static;
+          width: 100%;
+          margin-top: 0.45rem;
+          text-align: center;
+        }
+
+        .pdf-modal-content {
+          width: 98vw;
+          height: 90vh;
         }
       }
     </style>
@@ -1654,50 +1710,94 @@
 
         <div class="certificate-grid">
           <article class="certificate-card animate-on-scroll">
-            <div class="org-badge">IHK Berlin</div>
-            <div class="document-frame" data-watermark="IHK">
-              <p class="doc-label">Bescheinigung</p>
-              <h3 class="doc-title">Geprüfter Fachmann für Immobiliardarlehensvermittlung IHK</h3>
-              <p class="doc-subtitle">nach §34i Absatz 2 Nummer 4 der Gewerbeordnung</p>
-              <hr class="doc-divider" />
-              <p class="doc-name">Aleksandr Nikolaev</p>
-              <p class="doc-detail">IHK Berlin · 20. Juni 2025</p>
-              <div class="signature-row">
-                <div class="signature-line"></div>
-                <p class="signature-label">Manja Schreiner, Hauptgeschäftsführerin</p>
+            <div class="cert-card-layout">
+              <div class="cert-info">
+                <div class="org-badge">IHK BERLIN</div>
+                <h3 class="cert-title">Geprüfter Fachmann für Immobiliardarlehensvermittlung IHK</h3>
+                <p class="cert-subtitle">
+                  Sachkundeprüfung nach §34i Abs. 2 Nr. 4 GewO erfolgreich abgelegt vor der Industrie- und
+                  Handelskammer zu Berlin.
+                </p>
+                <div class="cert-meta">
+                  <div>
+                    <p class="cert-meta-label">Aussteller</p>
+                    <p>IHK Berlin</p>
+                  </div>
+                  <div>
+                    <p class="cert-meta-label">Datum</p>
+                    <p>20. Juni 2025</p>
+                  </div>
+                </div>
+                <div class="cert-badge-row">
+                  <span class="cert-badge">§34i GewO</span>
+                  <span class="cert-badge">IHK-geprüft</span>
+                  <span class="cert-badge">Registernummer verifiziert</span>
+                </div>
+              </div>
+              <div class="cert-pdf-wrapper">
+                <iframe
+                  src="IHK_Bescheinigung.pdf"
+                  width="100%"
+                  height="420px"
+                  style="border: none"
+                  title="IHK Bescheinigung — Aleksandr Nikolaev"
+                >
+                  <p style="padding: 20px; font-family: 'Jost', sans-serif; color: #6B6560; text-align: center">
+                    PDF-Vorschau nicht verfügbar.
+                    <a href="IHK_Bescheinigung.pdf" target="_blank" rel="noopener" style="color: var(--gold)"
+                      >Dokument öffnen →</a
+                    >
+                  </p>
+                </iframe>
+                <button class="pdf-fullscreen-btn" onclick="openFullscreen('IHK_Bescheinigung.pdf')">
+                  Vollbild öffnen ↗
+                </button>
               </div>
             </div>
-
-            <details class="expertise-details" open>
-              <summary>Sachgebiete anzeigen</summary>
-              <ul class="expertise-list">
-                <li>Kundenberatung &amp; Bedarfsermittlung</li>
-                <li>Kreditprodukte zur Immobilienfinanzierung</li>
-                <li>Verbraucherkreditrecht &amp; Verbraucherschutz</li>
-                <li>Kreditwürdigkeitsprüfung</li>
-                <li>Erwerb von Immobilien &amp; Darlehenssicherung</li>
-                <li>Bewertung von Sicherheiten</li>
-                <li>Grundbuchwesen</li>
-                <li>Ethische Standards &amp; Finanzwirtschaft</li>
-              </ul>
-            </details>
           </article>
 
           <article class="certificate-card animate-on-scroll" style="transition-delay: 140ms">
-            <div class="org-badge">TU Bergakademie Freiberg</div>
-            <div class="document-frame" data-watermark="M.Sc.">
-              <p class="doc-label">Masterurkunde</p>
-              <h3 class="doc-title">Master of Science (M.Sc.)</h3>
-              <p class="doc-subtitle">Betriebswirtschaftslehre</p>
-              <p class="doc-fine-print">
-                Fakultät für Wirtschaftswissenschaften, Internationale Ressourcenwirtschaft
-              </p>
-              <hr class="doc-divider" />
-              <p class="doc-name">Aleksandr Nikolaev</p>
-              <p class="doc-detail">TU Bergakademie Freiberg · 04. September 2019</p>
-              <div class="signature-row">
-                <div class="signature-line"></div>
-                <p class="signature-label">Prof. Dr. A. Horsch, Dekan</p>
+            <div class="cert-card-layout">
+              <div class="cert-info">
+                <div class="org-badge">TU BERGAKADEMIE FREIBERG</div>
+                <h3 class="cert-title">Master of Science (M.Sc.) — Betriebswirtschaftslehre</h3>
+                <p class="cert-subtitle">
+                  Fakultät für Wirtschaftswissenschaften, Studiengang Internationale Ressourcenwirtschaft.
+                </p>
+                <div class="cert-meta">
+                  <div>
+                    <p class="cert-meta-label">Aussteller</p>
+                    <p>TU Bergakademie Freiberg</p>
+                  </div>
+                  <div>
+                    <p class="cert-meta-label">Datum</p>
+                    <p>04. September 2019</p>
+                  </div>
+                </div>
+                <div class="cert-badge-row">
+                  <span class="cert-badge">Master of Science</span>
+                  <span class="cert-badge">BWL</span>
+                  <span class="cert-badge">Ressourcenwirtschaft</span>
+                </div>
+              </div>
+              <div class="cert-pdf-wrapper">
+                <iframe
+                  src="Masterurkunde.pdf"
+                  width="100%"
+                  height="420px"
+                  style="border: none"
+                  title="Masterurkunde — Aleksandr Nikolaev"
+                >
+                  <p style="padding: 20px; font-family: 'Jost', sans-serif; color: #6B6560; text-align: center">
+                    PDF-Vorschau nicht verfügbar.
+                    <a href="Masterurkunde.pdf" target="_blank" rel="noopener" style="color: var(--gold)"
+                      >Dokument öffnen →</a
+                    >
+                  </p>
+                </iframe>
+                <button class="pdf-fullscreen-btn" onclick="openFullscreen('Masterurkunde.pdf')">
+                  Vollbild öffnen ↗
+                </button>
               </div>
             </div>
           </article>
@@ -1870,6 +1970,14 @@
       </div>
     </section>
 
+    <div id="pdf-modal" class="pdf-modal" aria-hidden="true">
+      <div class="pdf-modal-overlay" onclick="closeFullscreen()"></div>
+      <div class="pdf-modal-content">
+        <button class="pdf-modal-close" onclick="closeFullscreen()">✕ Schließen</button>
+        <iframe id="pdf-modal-frame" src="" title="Zertifikat Vollbildansicht"></iframe>
+      </div>
+    </div>
+
     <script>
       (function () {
         const euroFormat = new Intl.NumberFormat("de-DE", {
@@ -1924,26 +2032,6 @@
         );
 
         document.querySelectorAll(".animate-on-scroll").forEach((el) => observer.observe(el));
-
-        const expertiseDetails = Array.from(document.querySelectorAll(".expertise-details"));
-        const expertiseMobileQuery = window.matchMedia("(max-width: 699px)");
-
-        function syncExpertisePanels() {
-          expertiseDetails.forEach((panel) => {
-            if (expertiseMobileQuery.matches) {
-              panel.removeAttribute("open");
-            } else {
-              panel.setAttribute("open", "");
-            }
-          });
-        }
-
-        syncExpertisePanels();
-        if (typeof expertiseMobileQuery.addEventListener === "function") {
-          expertiseMobileQuery.addEventListener("change", syncExpertisePanels);
-        } else if (typeof expertiseMobileQuery.addListener === "function") {
-          expertiseMobileQuery.addListener(syncExpertisePanels);
-        }
 
         const kaufpreis = document.getElementById("kaufpreis");
         const eigenkapital = document.getElementById("eigenkapital");
@@ -2032,6 +2120,26 @@
             "Vielen Dank! Ihre Anfrage wurde erfolgreich gesendet. Wir melden uns kurzfristig bei Ihnen.";
           leadForm.reset();
           updateCalculator();
+        });
+
+        window.openFullscreen = function openFullscreen(pdfPath) {
+          document.getElementById("pdf-modal-frame").src = pdfPath;
+          document.getElementById("pdf-modal").classList.add("active");
+          document.getElementById("pdf-modal").setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        };
+
+        window.closeFullscreen = function closeFullscreen() {
+          document.getElementById("pdf-modal").classList.remove("active");
+          document.getElementById("pdf-modal").setAttribute("aria-hidden", "true");
+          document.getElementById("pdf-modal-frame").src = "";
+          document.body.style.overflow = "";
+        };
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            window.closeFullscreen();
+          }
         });
       })();
     </script>
